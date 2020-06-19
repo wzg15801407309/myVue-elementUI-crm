@@ -1,36 +1,36 @@
-"use strict";
-import axios from "axios";
+'use strict'
+import axios from 'axios'
 // import store from "@/store";
 
-axios.defaults.headers.post["Content-Type"] =
-  "application/x-www-form-urlencoded";
-axios.defaults.withCredentials = false;
+axios.defaults.headers.post['Content-Type'] =
+  'application/x-www-form-urlencoded'
+axios.defaults.withCredentials = false
 
-let config = {
+const config = {
   timeout: 30 * 1000 // Timeout
-};
+}
 
-const _axios = axios.create(config);
+const _axios = axios.create(config)
 
 // 请求拦截
 _axios.interceptors.request.use(
   config => {
-    //设置是否携带token
+    // 设置是否携带token
     //   config.headers["Authorization"] = `token`;
-    return config;
+    return config
   },
   error => {
-    return Promise.reject(error);
+    return Promise.reject(error)
   }
-);
+)
 
 // 相应拦截
 _axios.interceptors.response.use(
   response => {
-    return response;
+    return response
   },
   error => {
-    return Promise.reject(error);
+    return Promise.reject(error)
   }
-);
-export default _axios;
+)
+export default _axios
