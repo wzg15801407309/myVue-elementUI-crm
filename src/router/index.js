@@ -17,6 +17,16 @@ export const constantRoutes = [
         component: () => import('@/views/redirect/index')
       }
     ]
+  },
+  {
+    path: '/404',
+    component: () => import('@/views/error-page/404'),
+    hidden: true
+  },
+  {
+    path: '/401',
+    component: () => import('@/views/error-page/401'),
+    hidden: true
   }
 ]
 const createRouter = () => new VueRouter({
