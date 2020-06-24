@@ -1,5 +1,7 @@
 <template>
-  <div id="home" />
+  <div id="home">
+    <span>123456789</span>
+  </div>
 </template>
 
 <script>
@@ -12,7 +14,9 @@ export default {
   },
   computed: {},
   watch: {},
-  created() { },
+  created() {
+    console.log('123')
+  },
   mounted() { },
   methods: {}
 }

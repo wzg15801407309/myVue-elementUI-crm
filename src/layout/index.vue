@@ -1,7 +1,5 @@
 <template>
-  <div class="app-wrapper">
-    home
-  </div>
+  <div class="app-wrapper" />
 </template>
 
 <script>
@@ -14,7 +12,9 @@ export default {
   },
   computed: {},
   watch: {},
-  created() { },
+  created() {
+    console.log('1334r3r')
+  },
   mounted() { },
   methods: {}
 }
